@@ -34,7 +34,8 @@
 reqres.in api = https://reqres.in/api
 
 # Запуск тестов
-mvn clean test\
+mvn clean test
+
 mvn clean test "-Dcucumber
 
 # Постороение локального отчета
