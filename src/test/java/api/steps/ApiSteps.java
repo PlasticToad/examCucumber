@@ -58,7 +58,7 @@ public class ApiSteps {
     public static void getOriginChar(String id) {
         getCharacterData(id, character1);
     }
-    @Step("Get запрос информаци о персонаже из эпизода с id {lEp}")
+    @Step("Get запрос информации о персонаже из эпизода с id {lEp}")
     public static void getLastCharOfLastEp(String lEp) {
         specInstall(reqSpec(prop.getProperty("RAMBURL")), respSpec());
         Response req = given()
