@@ -75,7 +75,7 @@ public class ApiSteps {
 
     }
     @Тогда("Сравнить расу и локацию персонажей")
-    public static void  checkSpeciesLocation() {
+    public static void checkSpeciesLocation() {
         try {
             Assertions.assertEquals(character1.getLocation(), character2.getLocation());
         } catch (AssertionFailedError e) {
@@ -104,8 +104,8 @@ public class ApiSteps {
         JSONObject body = null;
         try {
             body = new JSONObject(new String(Files.readAllBytes(Paths.get("src/test/resources/someJson.json"))));
-        } catch (IOException e) {
-            System.out.println("File error");
+        } catch (IOException ex) {
+            ex.printStackTrace();
         }
         body.put("name", name);
         body.put("Job", job);
